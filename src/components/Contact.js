@@ -1,10 +1,38 @@
 import { useEffect, useState } from 'react';
 import { fatchData } from '../utilits';
+import emailjs from 'emailjs-com';
+
 const Contact = () => {
 	const [data, setData] = useState({});
 	useEffect(async () => {
 		setData(await fatchData('/static/info.json'));
 	}, []);
+
+	const sendEmail = async (event) => {
+		event.preventDefault();
+
+		const templateParams = {
+			from_name: document.getElementById('name').value,
+			from_email: document.getElementById('email').value,
+			from_phone: document.getElementById('phone').value,
+			subject: document.getElementById('subject').value,
+			message: document.getElementById('message').value,
+		};
+
+		console.log(templateParams);
+
+		try {
+			await emailjs.send(
+				'service_dojhzvr',
+				'template_5j9nrcl',
+				templateParams,
+				'1mTwVaU_qniEJZiOP'
+			);
+			alert('Your message has been sent successfully!');
+		} catch (error) {
+			alert('Oops! Something went wrong. Please try again later.');
+		}
+	};
 	return (
 		<div
 			className="dizme_tm_section"
@@ -36,7 +64,6 @@ const Contact = () => {
 											</div>
 											<div className="short">
 												<h3>Address</h3>
-
 												<span>{data.contact.address}</span>
 											</div>
 										</div>
@@ -134,6 +161,7 @@ const Contact = () => {
 										<a
 											id="send_message"
 											href="#"
+											onClick={sendEmail}
 										>
 											<span>Submit Now</span>
 										</a>
@@ -165,4 +193,5 @@ const Contact = () => {
 		</div>
 	);
 };
+
 export default Contact;

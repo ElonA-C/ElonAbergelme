@@ -6,12 +6,7 @@ const MobileMenu = ({ logo }) => {
 			<div className="mobile_menu_inner">
 				<div className="mobile_in">
 					<div className="logo">
-						<a href="#">
-							<img
-								src={logo ? logo : 'img/logo/logo.png'}
-								alt="image"
-							/>
-						</a>
+						<a href="#"></a>
 					</div>
 					<div className="trigger">
 						<div
