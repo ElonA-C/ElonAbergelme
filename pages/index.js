@@ -3,13 +3,13 @@ import Head from 'next/head';
 import About from '../src/components/About';
 import Contact from '../src/components/Contact';
 import Home from '../src/components/Home';
-import News from '../src/components/News';
-import Newsletter from '../src/components/Newsletter';
-import Partners from '../src/components/Partners';
-import Process from '../src/components/Process';
-import Service from '../src/components/Service';
+// import News from '../src/components/News';
+// import Newsletter from '../src/components/Newsletter';
+// import Partners from '../src/components/Partners';
+// import Process from '../src/components/Process';
+// import Service from '../src/components/Service';
 import Skills from '../src/components/Skills';
-import Testimonial from '../src/components/Testimonial';
+// import Testimonial from '../src/components/Testimonial';
 import Layout from '../src/layout/Layout';
 
 const Portfolio = dynamic(() => import('../src/components/Portfolio'), {
