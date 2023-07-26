@@ -19,8 +19,6 @@ const Contact = () => {
 			message: document.getElementById('message').value,
 		};
 
-		console.log(templateParams);
-
 		try {
 			await emailjs.send(
 				'service_dojhzvr',
