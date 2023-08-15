@@ -155,10 +155,10 @@ const Portfolio = () => {
 								<div className="inner">
 									<div
 										className="entry dizme_tm_portfolio_animation_wrap"
-										data-title="AtgariLi"
+										data-title="EtgariLi"
 										data-category="Solo Project: Ninja Corporate Company"
 									>
-										<a href="https://github.com/ElonAbergel/AtgariLi">
+										<a href="https://github.com/ElonAbergel/Etagrili">
 											<img
 												src="img/thumbs/42-34.jpg"
 												alt="image"
